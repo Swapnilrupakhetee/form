@@ -1,0 +1,22 @@
+.form-container{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form-group{
+    text-align: right;
+    padding: 10px;
+}
+.form-group-button{
+    
+    padding: 10px;
+    text-align: center;
+    margin-left: 3rem;
+}
+button{
+    outline: none;
+    
+}
