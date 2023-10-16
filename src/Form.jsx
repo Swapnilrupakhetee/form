@@ -16,6 +16,18 @@ function Form() {
         })
      
     }
+    const handlelastName=(e)=>{
+        setValues({
+            ...values,
+            lastName:e.target.value
+        })
+    }
+    const handleemail =(e)=>{
+        setValues({
+            ...values,
+            email:e.target.value
+        })
+    }
 
 
     
@@ -36,11 +48,11 @@ function Form() {
             </div>
             <div className='form-group'>
                 <label className='form-label'>Last Name: </label>
-                <input value={values.lastName} className='form-input' name='lastName' placeholder='Email' />
+                <input onChange={handlelastName} value={values.lastName} className='form-input' name='lastName' placeholder='Email' />
             </div>
             <div className='form-group'>
                 <label className='form-label'>Email: </label>
-                <input value={values.email} className='form-input' name='email' placeholder='Email' />
+                <input onChange={handleemail} value={values.email} className='form-input' name='email' placeholder='Email' />
             </div>
             
             <div className='form-group-button'>
