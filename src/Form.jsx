@@ -10,6 +10,7 @@ function Form() {
 
     })
     const[submitted,setSubmitted] = useState(false)
+    const[valid,setValid] = useState(false)
     const handlefirstName =(e)=>{
         setValues({
           ...values,
@@ -32,12 +33,17 @@ function Form() {
     const handleSubmit =(e)=>{
         e.preventDefault()
         setSubmitted(true)
+        if(values.firstName && values.lastName && values.email)
+        {
+            setValid(true);
+        }
+        
     }
 
   return (
     <div className='form-container'>
         <form className='form'>
-            {submitted ? <div className="submitted">
+            {submitted && valid ? <div className="submitted">
                 Thank you for filling the form !!!</div>:null}
             <div className='form-group'>
 
