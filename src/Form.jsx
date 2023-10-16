@@ -9,6 +9,7 @@ function Form() {
         
 
     })
+    const[submitted,setSubmitted] = useState(false)
     const handlefirstName =(e)=>{
         setValues({
           ...values,
@@ -28,19 +29,16 @@ function Form() {
             email:e.target.value
         })
     }
-
-
-    
-    
-    
-    
+    const handleSubmit =(e)=>{
+        e.preventDefault()
+        setSubmitted(true)
+    }
 
   return (
     <div className='form-container'>
         <form className='form'>
-            <div className="submitted">
-                Thank you for filling the form !!!
-                </div>
+            {submitted ? <div className="submitted">
+                Thank you for filling the form !!!</div>:null}
             <div className='form-group'>
 
                 <label className='form-label'>Name: </label>
@@ -56,7 +54,7 @@ function Form() {
             </div>
             
             <div className='form-group-button'>
-                <button className='form-button' >Submit</button>
+                <button className='form-button' onClick={handleSubmit}>Submit</button>
             </div>
         </form>
     </div>
