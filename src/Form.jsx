@@ -9,7 +9,14 @@ function Form() {
         
 
     })
-    
+    const handlefirstName =(e)=>{
+        setValues({
+          ...values,
+            firstName: e.target.value
+        })
+     
+    }
+
 
     
     
@@ -25,7 +32,7 @@ function Form() {
             <div className='form-group'>
 
                 <label className='form-label'>Name: </label>
-                <input value={values.firstName} className='form-input' name='firstName' placeholder='Name' />
+                <input onChange={handlefirstName} value={values.firstName} className='form-input' name='firstName' placeholder='Name' />
             </div>
             <div className='form-group'>
                 <label className='form-label'>Last Name: </label>
