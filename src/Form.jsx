@@ -43,14 +43,17 @@ function Form() {
 
                 <label className='form-label'>Name: </label>
                 <input onChange={handlefirstName} value={values.firstName} className='form-input' name='firstName' placeholder='Name' />
+                {submitted && !values.firstName ?<span>Invalid value</span>: null }
             </div>
             <div className='form-group'>
                 <label className='form-label'>Last Name: </label>
                 <input onChange={handlelastName} value={values.lastName} className='form-input' name='lastName' placeholder='Email' />
+                {submitted && !values.lastName ?<span>Invalid value</span> :null}
             </div>
             <div className='form-group'>
                 <label className='form-label'>Email: </label>
                 <input onChange={handleemail} value={values.email} className='form-input' name='email' placeholder='Email' />
+                {submitted && !values.email ? <span>Invalid value</span>:null}
             </div>
             
             <div className='form-group-button'>

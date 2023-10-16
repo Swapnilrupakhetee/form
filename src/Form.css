@@ -30,4 +30,8 @@ button{
     text-align: center;
     
 }
-
+span{
+    color: red;
+    display: flex;
+    justify-content: center;
+}
